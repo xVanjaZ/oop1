@@ -1,2 +1,3 @@
-# oop1
-oop1 opgaves
+# OOP1 Opdrachten
+## Door
+Jari Kruitbos, 

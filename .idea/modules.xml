@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/oop1.iml" filepath="$PROJECT_DIR$/.idea/oop1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p1/p1.iml" filepath="$PROJECT_DIR$/p1/p1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2a/p2a.iml" filepath="$PROJECT_DIR$/p2a/p2a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2b/p2b.iml" filepath="$PROJECT_DIR$/p2b/p2b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p3b/p3b.iml" filepath="$PROJECT_DIR$/p3b/p3b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p4a/p4a.iml" filepath="$PROJECT_DIR$/p4a/p4a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p4b/p4b.iml" filepath="$PROJECT_DIR$/p4b/p4b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p5/p5.iml" filepath="$PROJECT_DIR$/p5/p5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p6a/p6a.iml" filepath="$PROJECT_DIR$/p6a/p6a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p6b/p6b.iml" filepath="$PROJECT_DIR$/p6b/p6b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p7/p7.iml" filepath="$PROJECT_DIR$/p7/p7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p8/p8.iml" filepath="$PROJECT_DIR$/p8/p8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p9a/p9a.iml" filepath="$PROJECT_DIR$/p9a/p9a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p9b/p9b.iml" filepath="$PROJECT_DIR$/p9b/p9b.iml" />
+    </modules>
+  </component>
+</project>
