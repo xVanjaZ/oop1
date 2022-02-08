@@ -50,8 +50,11 @@ public class Main {
         FileWriter writer = new FileWriter(file);
 
         for (String line : lines) {
-            writer.write(line);
+            System.out.println(line);
+            writer.write(line + "\n");
         }
+
+        writer.close();
     }
 
     public static ArrayList<String> readFile(File file) throws IOException {
