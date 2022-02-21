@@ -1,0 +1,1 @@
+To open this javaFX application, please open the "v1oop-hotelapp" folder in intelij

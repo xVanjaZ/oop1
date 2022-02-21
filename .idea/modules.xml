@@ -17,8 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/p7/p7.iml" filepath="$PROJECT_DIR$/p7/p7.iml" />
       <module fileurl="file://$PROJECT_DIR$/p8/p8.iml" filepath="$PROJECT_DIR$/p8/p8.iml" />
       <module fileurl="file://$PROJECT_DIR$/p9a/p9a.iml" filepath="$PROJECT_DIR$/p9a/p9a.iml" />
-      <module fileurl="file://$PROJECT_DIR$/p9b/p9b.iml" filepath="$PROJECT_DIR$/p9b/p9b.iml" />
-      <module fileurl="file://$PROJECT_DIR$/p10/src/v1oop-hotelapp/v1oop-hotelapp.iml" filepath="$PROJECT_DIR$/p10/src/v1oop-hotelapp/v1oop-hotelapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p9b/src/v1oop-hotelapp/v1oop-hotelapp.iml" filepath="$PROJECT_DIR$/p9b/src/v1oop-hotelapp/v1oop-hotelapp.iml" />
     </modules>
   </component>
 </project>
