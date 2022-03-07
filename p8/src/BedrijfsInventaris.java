@@ -20,11 +20,10 @@ public class BedrijfsInventaris {
             return;
         }
 
-        for (Goed goed : this.alleGoederen) {
-            if (goed.equals(niewgoed)) {
-                System.out.println("Kan goed niet aanschaffen: Goed bestaat al. Goed: " + niewgoed);
-                return;
-            }
+
+        if (this.alleGoederen.contains(niewgoed)) {
+            System.out.println("Kan goed niet aanschaffen: Goed bestaat al. Goed: " + niewgoed);
+            return;
         }
 
         this.budget -= kost;

@@ -16,11 +16,11 @@ public class Fiets extends Voertuig {
 
     @Override
     public boolean equals(Object object) {
+        // Super gebruiken om te checken
         if (object instanceof Fiets) {
             Fiets compare = (Fiets) object;
-            return this.framenummer == compare.framenummer;
+            return super.equals(object) && this.framenummer == compare.framenummer;
         }
-
         return false;
     }
 }

@@ -18,7 +18,7 @@ public class Auto extends Voertuig {
     public boolean equals(Object object) {
         if (object instanceof Auto) {
             Auto compare = (Auto) object;
-            return this.kenteken.equals(compare.kenteken);
+            return super.equals(object) && this.kenteken.equals(compare.kenteken);
         }
 
         return false;

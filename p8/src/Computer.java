@@ -24,7 +24,7 @@ public class Computer implements Goed {
     public boolean equals(Object object) {
         if (object instanceof Computer) {
             Computer compare = (Computer) object;
-            return this.macAdres.equals(compare.macAdres);
+            return super.equals(object) && this.macAdres.equals(compare.macAdres);
         }
 
         return false;
