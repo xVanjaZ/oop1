@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        // Errors throwen
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("[DEBUG]: My File path: /Users/jari/Documents/School/1/oop1/p11/src/usd.txt");
@@ -47,14 +48,13 @@ public class Main {
     }
 
     public static void writeFile(ArrayList<String> lines, String file) throws IOException {
-        FileWriter writer = new FileWriter(file);
-
-        for (String line : lines) {
-            System.out.println(line);
-            writer.write(line + "\n");
+        // Intelij corrected me to this when I tried to use try & finally...
+        try (FileWriter writer = new FileWriter(file)) {
+            for (String line : lines) {
+                System.out.println(line);
+                writer.write(line + "\n");
+            }
         }
-
-        writer.close();
     }
 
     public static ArrayList<String> readFile(File file) throws IOException {
