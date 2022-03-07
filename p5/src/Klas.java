@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Klas {
@@ -10,6 +11,10 @@ public class Klas {
     }
 
     public void voegLeerlingToe(Leerling leerling) {
+        if (leerling == null) {
+            throw new NullPointerException("Leerling is null");
+        }
+
         this.leerlingen.add(leerling);
     }
 
@@ -22,7 +27,7 @@ public class Klas {
     }
 
     public List<Leerling> getLeerlingen() {
-        return leerlingen;
+        return Collections.unmodifiableList(leerlingen); // do this more often!
     }
 
     public int aantalLeerlingen() {
@@ -31,9 +36,9 @@ public class Klas {
 
     @Override
     public String toString() {
-        String s = "In klas " + klasCode + " zitten de volgende leerlingen:";
+        StringBuilder s = new StringBuilder("In klas " + klasCode + " zitten de volgende leerlingen:");
         for (Leerling l : leerlingen){
-            s += "\n" + l;}
+            s.append("\n").append(l);}
         return s + "\n";
     }
 }
