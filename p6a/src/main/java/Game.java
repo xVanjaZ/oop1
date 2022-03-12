@@ -20,7 +20,6 @@ public class Game {
         double prijs = nieuwPrijs;
 
         int verschilInJaren = LocalDate.now().getYear() - releaseJaar;
-
         if (verschilInJaren > 0) {
             for (int i = 1; i <= verschilInJaren; i++) {
                 prijs = prijs * korting;
@@ -30,11 +29,11 @@ public class Game {
         return prijs;
     }
 
-    public boolean equals(Object andereObject) {
-        if (andereObject instanceof Game andereGame) {
-            return this.naam.equals(andereGame.naam) && this.releaseJaar == andereGame.releaseJaar;
+    public boolean equals(Object object) {
+        if (object instanceof Game) {
+            Game compare = (Game) object;
+            return this.naam.equals(compare.naam) && this.releaseJaar == compare.releaseJaar;
         }
-
         return false;
     }
 
