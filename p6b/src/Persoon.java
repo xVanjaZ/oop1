@@ -50,16 +50,16 @@ public class Persoon {
         return null;
     }
 
-    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> games){
-        ArrayList<Game> lijst = new ArrayList<>();
+    public ArrayList<Game> gamesNietInBezit(ArrayList<Game> games){
+        ArrayList<Game> nietInBezit = new ArrayList<>();
 
-        for (Game game : this.games){
-            if (!games.contains(game)){
-                lijst.add(game);
+        for (Game game : games){
+            if (!this.games.contains(game)){
+                nietInBezit.add(game);
             }
         }
 
-        return lijst;
+        return nietInBezit;
     }
 
     public String toString() {

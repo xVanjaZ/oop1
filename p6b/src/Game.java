@@ -20,7 +20,6 @@ public class Game {
         double prijs = nieuwPrijs;
 
         int verschilInJaren = LocalDate.now().getYear() - releaseJaar;
-
         if (verschilInJaren > 0) {
             for (int i = 1; i <= verschilInJaren; i++) {
                 prijs = prijs * korting;
