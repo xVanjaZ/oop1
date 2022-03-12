@@ -2,6 +2,8 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
+
+        // Implement unit tests
         int releaseJaar1 = LocalDate.now().getYear() - 1; // 1 jaar geleden
 
         Game g1 = new Game("Just Cause 3", releaseJaar1, 49.98);

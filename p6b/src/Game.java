@@ -29,11 +29,11 @@ public class Game {
         return prijs;
     }
 
-    public boolean equals(Object andereObject) {
-        if (andereObject instanceof Game andereGame) {
-            return this.naam.equals(andereGame.naam) && this.releaseJaar == andereGame.releaseJaar;
+    public boolean equals(Object object) {
+        if (object instanceof Game) {
+            Game compare = (Game) object;
+            return this.naam.equals(compare.naam) && this.releaseJaar == compare.releaseJaar;
         }
-
         return false;
     }
 
