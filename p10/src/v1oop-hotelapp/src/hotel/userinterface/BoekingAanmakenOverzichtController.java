@@ -4,10 +4,12 @@ import hotel.model.Boeking;
 import hotel.model.Hotel;
 import hotel.model.Kamer;
 import hotel.model.KamerType;
+import hotel.utils.Validator;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class BoekingAanmakenOverzichtController {
@@ -29,41 +31,20 @@ public class BoekingAanmakenOverzichtController {
     }
 
     public void createBooking() {
-        LocalDate now = LocalDate.now();
+        // error handling op een betere plek (domein)
+        Validator validator = new Validator();
 
-        if (this.nameInput.getText().trim().isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Naam mag niet leeg zijn");
-            alert.show();
-            return;
-        }
+        validator.textFieldNotEmpty(this.nameInput);
+        validator.textFieldNotEmpty(this.adresInput);
 
-        if (this.adresInput.getText().trim().isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Adres mag niet leeg zijn");
-            alert.show();
-            return;
-        }
+        validator.datePickerIsBefore(this.arrivedateInput, LocalDate.now());
+        validator.datePickerIsBefore(this.leavedateInput, LocalDate.now());
+        validator.datePickerIsBefore(this.leavedateInput, this.arrivedateInput.getValue());
 
-        if (this.arrivedateInput.getValue().isBefore(now)) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Aankomstdatum mag niet eerder zijn dan vandaag");
-            alert.show();
-            return;
-        }
+        validator.comboBoxIsNotNull(this.roomtypeInput);
 
-        if (this.leavedateInput.getValue().isBefore(now)) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Vertrekdatum mag niet eerder zijn dan vandaag");
-            alert.show();
-            return;
-        }
-
-        if (this.leavedateInput.getValue().isBefore(this.arrivedateInput.getValue())) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Vertrekdatum mag niet eerder zijn dan vandaag");
-            alert.show();
-            return;
-        }
-
-        if (this.roomtypeInput.getValue() == null) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Kamertype mag niet leeg zijn");
-            alert.show();
+        if (validator.hasErrors()) {
+            validator.showErrors();
             return;
         }
 
